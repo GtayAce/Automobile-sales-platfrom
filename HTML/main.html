@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width">
+		<title>汽车销售</title>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+	  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+	  <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="../css/OfficalWebsite/BenTian.css">
+		<link rel="stylesheet" href="../css/OfficalWebsite/FengTian.css">
+		<link rel="stylesheet" href="../css/OfficalWebsite/DaZhong.css">
+		<link rel="stylesheet" href="../css/OfficalWebsite/RiChan.css"> 
+		<link rel="stylesheet" href="../css/OfficalWebsite/BMW.css"> 
+		<link rel="stylesheet" href="../css/OfficalWebsite/FuTe.css"> 
+		<link rel="stylesheet" href="../css/OfficalWebsite/BaoShiJie.css"> 
+		<link rel="stylesheet" href="../css/OfficalWebsite/LanBiJiNi.css"> 
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/MovePicture.css">
+	  <link rel="stylesheet" href="../css/Modal.css">
+		
+
+		<link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <script src="https://cache.amap.com/lbs/static/es5.min.js"></script>
+		 <script src="https://webapi.amap.com/maps?v=1.4.8&key=5de61c6cf673b9183f7b4a14afda9d46"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	</head>
+	
+	<body>
+		
+	<!--导航栏-->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+         <div class="container">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">汽车销售平台</a>
+						</div>
+				
+				
+						<div class="navbar-collapse collapse" id="collapse">
+
+								<ul class="nav navbar-nav" id="navbar-nav">
+									<li class=""><a href="" class="MainMenu">首页</a></li>
+									<li><a href="javascript:;"class="BuyCar">我要买车</a></li>
+									
+									
+									<li class="dropdown">
+									<a href="" class="dropdown-toggle" data-toggle="dropdown">应用<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#mylocation" data-toggle="modal" data-target="#mylocation">位置</a></li>
+										<li><a href="#myweather" data-toggle="modal" data-target="#myweather">天气查询</a></li>
+									</ul>
+									</li>
+									
+									<li><a href="#mygroup" data-toggle="modal" data-target="#mygroup">关于</a></li>
+									<li><a href="#ListCarLogo" data-toggle="modal" data-target="#ListCarLogo">品牌介绍</a></li>
+									<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">我的管理<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="modifyInfo.html">修改个人信息</a></li>
+												<li><a href="MyOrder.html">个人订单查看</a></li>
+											</ul>
+											
+									</li>
+									<li><a href="#myModal" class="Login"data-toggle="modal" data-target="#myModal" id="Login">登录</a></li>
+									<li><a href="#myModalRigister" class="Register"data-toggle="modal" data-target="#myModalRigister">注册</a></li>
+								</ul>
+								
+						</div>
+				</div>
+		</div>
+
+ <div id="sidebar">
+        <div id="wrap">
+            <div id="prof" class="item">
+                <span>
+                    <i class="glyphicon glyphicon-user"></i>
+                </span>
+                <div>
+                    我的足迹
+                </div>
+            </div>
+           
+        </div>
+		
+		
+        <div id="closeBar">
+            <div>
+                <i class="glyphicon glyphicon-remove"></i>
+            </div>
+        </div>
+		
+    </div>
+	
+    <div id="prof-content" class="nav-content">
+        <div class="nav-con-close">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+        </div>
+        <div>
+            
+        </div>
+    </div>
+	
+		
+	<!--图片轮播-->
+	
+	<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+		<!--
+    <ul class="carousel-indicators" id="carouselindicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    
+		</ul>-->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="../img/MovePicture/1_1.jpg" alt="1 slide">
+        </div>
+        <div class="item">
+            <img src="../img/MovePicture/BaoMa_1.jpg" alt="2 slide">
+        </div>
+        <div class="item">
+            <img src="../img/MovePicture/BaoShiJie_1.jpg" alt="3 slide">
+        </div>
+        <div class="item">
+            <img src="../img/MovePicture/C8.jpg" alt="4 slide">
+        </div>
+        <div class="item">
+            <img src="../img/MovePicture/LanBoJiNi_1.jpg" alt="5 slide">
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+	
+	
+	
+	<!--买车框-->	
+  <div class="panel panel-default">
+  <div class="panel-heading">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	&emsp;&emsp;&emsp;
+	我要买车</div>
+		<div class="panel-body">
+			<a href="Offcialwebsite/BenTian.html" class="BenTian">
+				<img src="../img/CarLogo/BenTian.png" width="70" height="70">
+				<span class="BenTianText">本田</span>
+			</a>
+		
+			
+			<a href="Offcialwebsite/FengTian.html" class="FengTian">
+				<img src="../img/CarLogo/FengTian.png" width="100" height="70">
+				<span class="FengTianText">丰田</span>
+			</a>
+			
+			<a href="Offcialwebsite/DaZhong.html" class="DaZhong">
+				<img src="../img/CarLogo/DaZhong.png" width="70" height="70">
+				<span class="DaZhongText">大众</span>
+			</a>
+			
+			<a href="Offcialwebsite/RiChan.html" class="RiChan">
+				<img src="../img/CarLogo/RiChan.png" width="70" height="70">
+				<span class="RiChanText">日产</span>
+			</a>
+		
+			<a href="Offcialwebsite/BMW.html" class="BMW">
+				<img src="../img/CarLogo/BMW.png" width="70" height="70">
+				<span class="BMWText">宝马</span>
+			</a>
+		
+			<a href="Offcialwebsite/FuTe.html" class="FeTe">
+				<img src="../img/CarLogo/FuTe.png" width="120" height="80">
+				<span class="FuTeText">福特</span>
+			</a>
+			
+			<a href="Offcialwebsite/BaoShiJie.html" class="BaoShiJie">
+				<img src="../img/CarBigLogo/BaoShiJieLogo.png" width="120" height="80">
+				<span class="BaoShiJieText">保时捷</span>
+			</a>
+			
+			<a href="Offcialwebsite/LanBoJiNi.html" class="LanBoJiNi">
+				<img src="../img/CarBigLogo/LanBoJiNi.png" width="90" height="90">
+				<span class="LanBoJiNiText">兰博基尼</span>
+			</a>
+			
+		
+
+	  </div>
+	
+</div>
+		
+		
+		
+	<!--线分隔-->
+	<hr class="feature-divider">
+		
+		
+	<!--分栏-->			
+	<ul class="nav nav-tabs" role="tablist" id="feature-tab">
+		
+        <li class="active"><a href="#BenTian" role="tab" data-toggle="tab" id="one">本田</a></li>
+        <li><a href="#FengTian" role="tab" data-toggle="tab">丰田</a></li>
+        <li><a href="#DaZhong" role="tab" data-toggle="tab">大众</a></li>
+        <li><a href="#RiChan" role="tab" data-toggle="tab">日产</a></li>
+        <li><a href="#BaoMa" role="tab" data-toggle="tab">宝马</a></li>
+				<li><a href="#FuTe" role="tab" data-toggle="tab">福特</a></li>
+				<li><a href="#BaoShiJie" role="tab" data-toggle="tab">保时捷</a></li>
+				<li><a href="#LanBoJiNi" role="tab" data-toggle="tab">兰博基尼</a></li>
+	
+  </ul>		
+	
+	<div class="tab-content" id="tabcontent">
+		<!--本田车-->
+		
+		<div class="tab-pane active" id="BenTian">
+			<div class="ListOfCar">
+				<div class="BenCRV">
+						<span id="CRV">本田CRV&nbsp;&nbsp;&nbsp;2.0L 净致版</span>
+						<span id="CRVPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="CRVPricenumber">25.98万元</span></span>
+						<button  class="btn btn-success" type="button" id="BenTianbuttom1" >立即购买</button>
+				</div>
+				
+				
+				<div class="BenLingPai">
+					<span id="LingPai">本田凌派&nbsp;&nbsp;&nbsp;1.8L&nbsp;&nbsp;MT&nbsp;&nbsp;豪华版</span>
+					<span id="LingPaiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="LingPaiPricenumber">12.48万元</span></span>
+					<button  class="btn btn-success" type="button" id=""BenTianbuttom2" >立即购买</button>
+				</div>
+				
+				<div class="BenSiYu">
+					<span id="SiYu">本田思域&nbsp;&nbsp;&nbsp;180TURBO&nbsp;&nbsp;舒适版</span>
+					<span id="SiYuPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="SiYuPricenumber">13.89万元</span></span>
+					<button  class="btn btn-success" type="button" id=""BenTianbuttom3" >立即购买</button>
+				</div>
+				
+				
+				<div class="BenYaGe">
+					<span id="YaGe">本田雅阁&nbsp;&nbsp;&nbsp;1.8L&nbsp;&nbsp;MT&nbsp;&nbsp;锐尊版</span>
+					<span id="YaGePrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="YaGePricenumber">27.89万元</span></span>
+				<button  class="btn btn-success" type="button" id=""BenTianbuttom4" >立即购买</button>
+				</div>
+				
+				
+				<div class="BenGeShiTu">
+					<span id="GeShiTu">本田歌诗图&nbsp;&nbsp;&nbsp;1.8L&nbsp;&nbsp;MT&nbsp;&nbsp;至享版</span>
+					<span id="GeShiTuPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="GeShiTuPricenumber">30.89万元</span></span>
+					<button  class="btn btn-success" type="button" id=""BenTianbuttom5" >立即购买</button>
+				</div>
+				
+				<div class="BenAODeSai">
+					<span id="AODeSai">本田奥德赛&nbsp;&nbsp;&nbsp;1.8L&nbsp;&nbsp;MT&nbsp;&nbsp;至享版</span>
+					<span id="AODeSaiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="AODeSaiPricenumber">30.89万元</span></span>
+					<button  class="btn btn-success" type="button" id=""BenTianbuttomsix" >立即购买</button>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		
+		<!--丰田车-->
+		<div class="tab-pane" id="FengTian">
+				<div class="ListOfCar">
+					<div class="FengTianCarmary">
+						<span class="CAMRY">CAMRY HYBRID&nbsp;&nbsp;凯美瑞双擎&nbsp;&nbsp;2018款
+						&nbsp;&nbsp;2.5HG&nbsp;&nbsp;豪华版<br/>
+						<span class="Camryprice">官方指导价:&nbsp;&nbsp;<span class="pricenumber">23.98万元</span></span>
+						</span>
+						<!--<a class="buttonone" href="../ShopUI.html" target="_blank">--><button  class="btn btn-success" type="button" id="buttomone" >立即购买</button><!--</a>-->
+					</div>
+					
+					<div class="FengTianLuLaDuo">
+						
+						<span class="PRADO">PRADO&nbsp;&nbsp;普拉多&nbsp;&nbsp;&nbsp;2018新款&nbsp;&nbsp;&nbsp;3.5L&nbsp;&nbsp;TX</span>
+						<span class="FengTianLuLaDuoprice">官方指导价:&nbsp;&nbsp;<span class="FengTianLuLaDuopricenumber">44.38万元</span></span>
+						<button class="btn btn-success" type="button" id="buttomtwo">立即购买</button> 
+					</div>
+					
+					<div class="FengHanLanDa">
+						<span class="HIGHLANDER">HIGHLANDER&nbsp;&nbsp;汉兰达&nbsp;&nbsp;2018新款&nbsp;&nbsp;2.0T&nbsp;&nbsp;&nbsp;四驱至尊版</span>
+						<span class="FengHanLanDaprice">官方指导价:&nbsp;&nbsp;<span class="FengHanLanDapricenumber">35.38万元</span></span>
+						<button class="btn btn-success" type="button" id="buttomthree">立即购买</button> 
+					</div>
+					
+					
+					<div class="FengLeiLing">
+						<span class="LEILING">LEVIN&nbsp;&nbsp;HYBRID&nbsp;&nbsp;雷凌双擎&nbsp;&nbsp;2018新款&nbsp;&nbsp;1.8H&nbsp;&nbsp;GS-L&nbsp;&nbsp;领先版</span>
+						<span class="FengLeiLingprice">官方指导价:&nbsp;&nbsp;<span class="FengLeiLingpricenumber">15.48万元</span></span>
+						<button class="btn btn-success" type="button" id="buttomfour">立即购买</button> 
+					</div>
+					
+					<div class="FengYiZe">
+						<span class="YiZe">IZOA&nbsp;&nbsp;奕泽&nbsp;&nbsp;2018新款&nbsp;&nbsp;2.0L</span>
+						<span class="FengYiZeprice">官方指导价:<span class="FengYiZepricenumber">15.23万元</span></span>
+						<button class="btn btn-success" type="button" id="buttomfive">立即购买</button> 
+					</div>
+					
+					
+					<div class="FengZhiXuan">
+						<span class="ZhiXuan">YARIS&nbsp;L&nbsp;&nbsp;致炫&nbsp;&nbsp;1.5G&nbsp;&nbsp;&nbsp;&nbsp;炫动天窗版</span>
+						<span class="ZhiXuanprice">官方指导价:<span class="ZhiXuanpricenumber">10.13万元</span></span>
+						<button class="btn btn-success" type="button" id="buttomsix">立即购买</button> 
+					</div>
+			</div>
+		</div>
+		
+		<!--大众-->
+		<div class="tab-pane active" id="DaZhong">
+			 <div class="ListOfCar">
+					 
+		
+						<div class="ZhongHuiYang">
+							 <span id="HuiYang">大众&nbsp;&nbsp;辉阳</span>
+							 <span id="HuiYangPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="HuiYangPricenumber">13.25万元</span></span>
+							 <button  class="btn btn-success" type="button" id="dazhongbuttom1" >立即购买</button>
+						</div>
+						
+						
+						<div class="ZhongCC">
+							<span id="CC">大众&nbsp;&nbsp;CC</span>
+							<span id="CCPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="CCPricenumber">30.54万元</span></span>
+							<button  class="btn btn-success" type="button" id="dazhongbuttom2" >立即购买</button>
+						</div>
+						
+						
+						<div class="ZhongCrossCoupe">
+							<span id="CrossCoupe">大众&nbsp;&nbsp;CrossCoupe</span>
+							<span id="CrossCoupePrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="CrossCoupePricenumber">20.74万元</span></span>
+							<button  class="btn btn-success" type="button" id="dazhongbuttom3" >立即购买</button>
+						</div>
+						
+						
+						<div class="ZhongInset">
+							<span id="Inset">大众&nbsp;&nbsp;甲壳虫</span>
+							<span id="InsetPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="InsetPricenumber">30.89万元</span></span>
+							<button  class="btn btn-success" type="button" id="dazhongbuttom4" >立即购买</button>
+						</div>
+						
+						
+						<div class="ZhongTuRui">
+							<span id="TuRui">大众&nbsp;&nbsp;途锐</span>
+							<span id="TuRuiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="TuRuiPricenumber">70.54万元</span></span>
+						<button  class="btn btn-success" type="button" id="dazhongbutttom5" >立即购买</button>
+						</div>
+						
+						
+						
+						<div class="ZhongMaiTeng">
+							<span id="MaiTeng">大众&nbsp;&nbsp;迈腾</span>
+							<span id="MaiTengPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="MaiTengPricenumber">20.25万元</span></span>
+							<button  class="btn btn-success" type="button" id="dazhongbuttom6" >立即购买</button>
+						</div>
+						
+				 </div>
+			
+		</div>
+		
+		<!--日产-->
+		<div class="tab-pane active" id="RiChan">
+			<div class="ListOfCar">
+				
+				<div class="RiTianLai">
+						<span id="TianLai">日产&nbsp;&nbsp;天籁</span>
+						<span id="TianLaiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="TianLaiPricenumber">17.45万元</span></span>
+					<button  class="btn btn-success" type="button" id="richanbuttom1" >立即购买</button>
+				</div>
+				
+				
+				<div class="RiGuiShi">
+					<span id="GuiShi">日产&nbsp;&nbsp;贵士</span>
+					<span id="GuiShiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="GuiShiPricenumber">43.21万元</span></span>
+					<button  class="btn btn-success" type="button" id="richanbuttom2" >立即购买</button>
+				</div>
+				
+				
+				<div class="RiQiJun">
+					<span id="QiJun">日产&nbsp;&nbsp;奇骏</span>
+					<span id="QiJunPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="QiJunPricenumber">17.59万元</span></span>
+				<button  class="btn btn-success" type="button" id="richanbuttom3" >立即购买</button>
+				</div>
+				
+				
+				<div class="RiXuanYi">
+					<span id="XuanYi">日产&nbsp;&nbsp;轩逸</span>
+					<span id="XuanYiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="XuanYiPricenumber">12.56万元</span></span>
+					<button  class="btn btn-success" type="button" id="richanbuttom4" >立即购买</button>
+				</div>
+				
+				
+				<div class="RiLouLan">
+					<span id="LouLan">日产&nbsp;&nbsp;楼兰</span>
+					<span id="LouLanPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="LouLanPricenumber">25.48万元</span></span>
+				<button  class="btn btn-success" type="button" id="richanbuttom5" >立即购买</button>
+				</div>
+				
+				
+				
+				<div class="RiGTR">
+					<span id="GTR">日产&nbsp;&nbsp;GTR</span>
+					<span id="GTRPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="GTRPricenumber">170.23万元</span></span>
+				<button  class="btn btn-success" type="button" id="richanbuttom6" >立即购买</button>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<!--宝马-->
+		<div class="tab-pane active" id="BaoMa">
+		 <div class="ListOfCar">
+				 
+				
+					<div class="BMW525i">
+						 <span id="W525i">宝马&nbsp;&nbsp;525i</span>
+						 <span id="W525iPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="W525iPricenumber">65.48万元</span></span>
+						<button  class="btn btn-success" type="button" id="BaoMabuttom1" >立即购买</button>
+					</div>
+					
+					
+		
+					<div class="BMWM6">
+						<span id="M6">宝马&nbsp;&nbsp;M6</span>
+						<span id="M6Price">官方指导价:&nbsp;&nbsp;&nbsp;<span class="M6Pricenumber">160.54万元</span></span>
+						<button  class="btn btn-success" type="button" id="BaoMabuttom2" >立即购买</button>
+					</div>
+					
+					
+					<div class="BMWX6">
+						<span id="X6">宝马&nbsp;&nbsp;X6</span>
+						<span id="X6Price">官方指导价:&nbsp;&nbsp;&nbsp;<span class="X6Pricenumber">94.56万元</span></span>
+						<button  class="btn btn-success" type="button" id="BaoMabuttom3" >立即购买</button>
+					</div>
+					
+					
+					<div class="BMWi8">
+						<span id="i8">宝马&nbsp;&nbsp;i8</span>
+						<span id="i8Price">官方指导价:&nbsp;&nbsp;&nbsp;<span class="i8Pricenumber">183.25万元</span></span>
+						<button  class="btn btn-success" type="button" id="BaoMabuttom4" >立即购买</button>
+					</div>
+					
+					
+					<div class="BMW2series">
+						<span id="series">BMW2系列旅游车</span>
+						<span id="seriesPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="seriesPricenumber">30.58万元</span></span>
+						<button  class="btn btn-success" type="button" id="BaoMabuttom5" >立即购买</button>
+					</div>
+					
+					
+					
+					<div class="BMW7series7">
+						<span id="series7">BMW7系列</span>
+						<span id="series7Price">官方指导价:&nbsp;&nbsp;&nbsp;<span class="series7Pricenumber">200.41万元</span></span>
+				<button  class="btn btn-success" type="button" id="BaoMabuttom6" >立即购买</button>
+					</div>
+					
+			 </div>
+		</div>
+		
+		
+		<!--福特-->
+		<div class="tab-pane active" id="FuTe">
+			<div class="ListOfCar">
+					<div class="FeTeZhiSheng">
+						<span id="ZhiSheng">福特&nbsp;&nbsp;致胜</span>
+						<span id="ZhiShengPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="ZhiShengPricenumber">25.98万元</span></span>
+						<button  class="btn btn-success" type="button" id="futebuttom1" >立即购买</button>
+					</div>
+					
+					
+					<div class="FeTeFocus">
+						<span id="Focus">福特&nbsp;&nbsp;福克斯</span>
+						<span id="FocusPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="FocusPricenumber">15.23万元</span></span>
+						<button  class="btn btn-success" type="button" id="futebuttom2" >立即购买</button>
+					</div>
+					
+					
+					<div class="FeTeJiaNianHua">
+						<span id="JiaNianHua">福特&nbsp;&nbsp;嘉年华</span>
+						<span id="JiaNianHuaPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="JiaNianHuaPricenumber">12.45万元</span></span>
+						<button  class="btn btn-success" type="button" id="futebuttom3" >立即购买</button>
+					</div>
+					
+					
+					<div class="FeTeMengDiOu">
+						<span id="MengDiOu">福特&nbsp;&nbsp;蒙迪欧</span>
+						<span id="MengDiOuPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="MengDiOuPricenumber">28.15万元</span></span>
+						<button  class="btn btn-success" type="button" id="futebuttom4" >立即购买</button>
+					</div>
+					
+				
+					
+					<div class="FengTeTanXianZhe">
+						<span id="TanXianZhe">福特&nbsp;&nbsp;探险者</span>
+						<span id="TanXianZhePrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="TanXianZhePricenumber">50.19万元</span></span>
+					<button  class="btn btn-success" type="button" id="futebuttom5" >立即购买</button>
+					</div>
+					
+					
+					<div class="FengFuRuiSi">
+						<span id="FuRuiSi">福特&nbsp;&nbsp;福睿斯</span>
+						<span id="FuRuiSiPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="FuRuiSiPricenumber">12.85万元</span></span>
+						<button  class="btn btn-success" type="button" id="futebuttom6" >立即购买</button>
+					</div>
+			</div>
+		</div>
+		
+		
+		<!--保时捷-->
+		<div class="tab-pane active" id="BaoShiJie">
+			<div class="ListOfCar">
+				
+			
+				<div class="BaoKaYan" >
+						<span id="KaYan">保时捷&nbsp;&nbsp;卡宴&nbsp;&nbsp;Turbo&nbsp;&nbsp;&nbsp;</span>
+						<span id="KaYanPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="KaYanPricenumber">94.05万元</span></span>
+					<button  class="btn btn-success" type="button" id="baoshijiebuttom1" >立即购买</button>
+				</div>
+				
+				<div class="BaoTarget911">
+					<span id="Target911">保时捷911&nbsp;&nbsp;&nbsp;Carrera</span>
+					<span id="Target911Price">官方指导价:&nbsp;&nbsp;&nbsp;<span class="Target911Pricenumber">130.58万元</span></span>
+					<button  class="btn btn-success" type="button" id="baoshijiebuttom2">立即购买</button>
+				</div>
+				
+				
+				<div class="BaoPan">
+					<span id="Pan">保时捷&nbsp;&nbsp;Panamera&nbsp;&nbsp;&nbsp;Sport&nbsp;&nbsp;Turismo</span>
+					<span id="PanPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="PanPricenumber">119.54万元</span></span>
+					<button  class="btn btn-success" type="button" id="baoshijiebuttom3">立即购买</button>
+				</div>
+				
+				
+				<div class="Bao718series">
+					<span id="series718">保时捷&nbsp;718系列&nbsp;&nbsp;&nbsp;</span>
+					<span id="series718Price">官方指导价:&nbsp;&nbsp;&nbsp;<span class="series718number">92.58万元</span></span>
+				<button  class="btn btn-success" type="button" id="baoshijiebuttom4">立即购买</button>
+				</div>
+				
+				
+				<div class="BaoMissionE">
+					<span id="MissionE">保时捷MissionE概念车&nbsp;&nbsp;&nbsp;1.8L&nbsp;&nbsp;MT&nbsp;&nbsp;至享版</span>
+					<span id="MissionEPrice">预测售价:&nbsp;&nbsp;&nbsp;<span class="MissionEPricenumber">600.58万元</span></span>
+					<button  class="btn btn-success" type="button" id="baoshijiebuttom5">立即购买</button>
+				</div>
+				
+				
+				
+				<div class="BaoCayenne">
+					<span id="Cayenne">保时捷&nbsp;&nbsp;Cayenne</span>
+					<span id="CayennePrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="CayennePricenumber">102.56万元</span></span>
+				<button  class="btn btn-success" type="button" id="baoshijiebuttom6">立即购买</button>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="tab-pane active" id="LanBoJiNi">
+			<div class="ListOfCar">
+					 
+					   
+						<div class="LanURUS">
+							 <span id="URUS">兰博基尼&nbsp;&nbsp;URUS</span>
+							 <span id="URUSPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="URUSPricenumber">302.25万元</span></span>
+							 <button  class="btn btn-success" type="button" id="lanbojinibuttom1" >立即购买</button>
+						</div>
+						
+						
+						
+						<div class="LanHuracan">
+							<span id="Huracan">兰博基尼&nbsp;&nbsp;Huracan</span>
+							<span id="HuracanPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="HuracanPricenumber">380.88万元</span></span>
+						<button  class="btn btn-success" type="button" id="lanbojinibuttom2" >立即购买</button>
+						</div>
+						
+						
+						<div class="LanAventAdor">
+							<span id="AventAdor">兰博基尼&nbsp;&nbsp;AventAdor</span>
+							<span id="AventAdorPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="AventAdorPricenumber">700.39万元</span></span>
+						<button  class="btn btn-success" type="button" id="lanbojinibuttom3" >立即购买</button>
+						</div>
+						
+						
+						<div class="LanCenten">
+							<span id="Centen">兰博基尼&nbsp;&nbsp;Centenario</span>
+							<span id="CentenPrice">官方指导价:&nbsp;&nbsp;&nbsp;<span class="Centennumber">1100.12万元</span></span>
+						<button  class="btn btn-success" type="button" id="lanbojinibuttom4" >立即购买</button>
+						</div>
+						
+				 </div>
+			
+		</div>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--模态框登录的制作-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width:350px">
+					
+				 <div class="modal-content" style="height:300px">
+								<div class="modal-header"><!--头部-->
+										
+										<h4 class="modal-title" id="myModalLabel">
+											登录
+										</h4>
+										
+								</div>
+								
+									
+										<div class="modal-body"><!--中间部分-->
+											<span class="text">用户名:</span><input type="text" class="form-control" placeholder="请输入登录用户名" id="LoginText">
+											<br/>
+											<span class="password">密码:</span><input type="password" class="form-control" placeholder="" id="PasswordText">
+											
+										</div>
+							
+										<div class="modal-footer"><!--底部-->
+								
+										<button class="btn btn-success" href="#"data-dismiss="modal" onclick="SuccessLogin()">登录</button> 
+										<button class="btn btn-inverse" href="#" id="close" onclick="CloseLogin()">关闭</button>
+								 
+										</div>
+								
+					</div>
+			 </div>
+	</div>
+	
+	
+	<!--模态框注册的制作-->
+	<div class="modal fade" id="myModalRigister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width:350px">
+					
+				<div class="modal-content" style="height:550px">
+								<div class="modal-header"><!--头部-->
+										
+										<h4 class="modal-title" id="myModalLabel">
+											注册
+										</h4>
+										
+								</div>
+								
+									
+										<div class="modal-body"><!--中间部分-->
+											<span class="text">用户名:</span><input type="text" class="form-control" placeholder="请输入注册用户名">
+											<span id="repeat">用户名重复</span>
+											<br/>
+											<span class="password">密码:</span><input type="password" class="form-control" placeholder="请输入注册密码">
+								      <span class="Age">出生年月:</span><input type="text" class="form-control" placeholder="">
+											<span class="RealName">真实姓名:</span><input type="text" class="form-control" placeholder="">
+											<span class="IDcard">身份证号码:</span><input type="text" class="form-control" placeholder="">
+											<span class="Address">地址:</span><input type="text" class="form-control" placeholder="">
+											<span class="TelePhone">电话:</span><input type="text" class="form-control" placeholder="">
+
+								
+								
+										</div>
+							
+										<div class="modal-footer"><!--底部-->
+								
+										<button class="btn btn-success" href="#"data-dismiss="modal" onclick="SuccessRigister()">注册</button> 
+										<button class="btn btn-inverse" href="#" id="close" onclick="CloseRigister()">关闭</button>
+								
+										</div>
+								
+					</div>
+			</div>
+	</div>
+	
+	
+	<!--关于小组的情况制作-->
+		<div class="modal fade" id="mygroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:400px">
+						
+					<div class="modal-content" style="height:400px">
+									<div class="modal-header"><!--头部-->
+											
+											<h3 class="modal-title" id="myModalLabel">
+												小组情况
+											</h3>
+											
+									</div>
+									
+											<div class="modal-body" ><!--中间部分-->
+											<span id="zhengjielin"><span class="name">郑洁玲</span>&nbsp;&nbsp;项目经理</span>
+											<br/>
+											<span id="chenqian" ><span class="name">陈茜</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PPT&nbsp;&nbsp;后端</span>
+											<br/>
+											<span id="wangqihao"><span class="name">王启豪</span>&nbsp;&nbsp;前端</span>
+											<br/>
+											<span id="huyusheng"><span class="name">胡钰圣</span>&nbsp;&nbsp;数据库&nbsp;&nbsp;后端</span>
+											<br/>
+											<span id="humianxiong"><span class="name">胡棉雄</span>&nbsp;&nbsp;后端&nbsp;&nbsp;文档</span>
+											<br/>
+											<span id="liangbiao"><span class="name">梁彪</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后端&nbsp;&nbsp;文档</span>
+											<br/>
+											
+									</div>
+						</div>
+				</div>
+		</div>
+	
+	
+	
+	<!--品牌介绍-->
+		<div class="modal fade" id="ListCarLogo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" style="width:1200px">
+						
+					<div class="modal-content" style="height:700px">
+									<div class="modal-header"><!--头部-->
+											
+											<h3 class="modal-title" id="myModalLabel">
+												品牌介绍
+											</h3>
+											
+									</div>
+									
+									<div class="modal-body" ><!--中间部分-->
+									  <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+									  			<li class="active"><a href="#BenTian" role="tab" data-toggle="tab">本田</a></li>
+									  			<li><a href="#FengTian" role="tab" data-toggle="tab">丰田</a></li>
+									  			<li><a href="#DaZhong" role="tab" data-toggle="tab">大众</a></li>
+									  			<li><a href="#RiChan" role="tab" data-toggle="tab">日产</a></li>
+									  			<li><a href="#BaoMa" role="tab" data-toggle="tab">宝马</a></li>
+									  			<li><a href="#FuTe" role="tab" data-toggle="tab">福特</a></li>
+									  			<li><a href="#BaoShiJie" role="tab" data-toggle="tab">保时捷</a></li>
+									  			<li><a href="#LanBoJiNi" role="tab" data-toggle="tab">兰博基尼</a></li>
+									  </ul>		
+										<!--简介-->
+											<div class="tab-content">
+											
+											  <!--本田车系介绍-->
+												<div class="tab-pane active" id="BenTian">
+										            <div class="row feature">
+										                <div class="col-md-7">
+										
+										                    <h2 class="feature-heading">本田 <span
+										                            class="text-muted">世界上最大的汽车生产厂家</span></h2>
+										
+										                    <p class="lead">
+																					本田指的是本田株式会社（本田技研工业株式会社）是世界上最大的摩托车生产厂家，
+																					汽车产量和规模也名列世界十大汽车厂家之列。<br/>
+																					1946年10月创立，1948年9月成立公司，创始人是传奇式人物本田宗一郎。
+																					公司总部在东京，雇员总数达18万人左右。现在，本田公司已是一个跨国汽车、摩托车生产销售集团。
+																					它的产品除汽车、摩托车外，还有发电机、农机等动力机械产品。<br/>
+																					2017年BrandZ全球最具价值品牌100强，本田(Honda) 汽车以121.63亿美元排名第91名。 
+																				</p>
+										                </div>
+										                <div class="col-md-5">
+										                    <img class="feature-image img-responsive" src="../img/CarBigLogo/BenTianLogo.png"
+										                         alt="BenTianLogo"width="500" height="500">
+										                </div>
+										            </div>
+												</div>
+												
+												<!--丰田车系介绍-->
+												<div class="tab-pane" id="FengTian">
+										            <div class="row feature">
+										                <div class="col-md-5">
+										                    <img class="feature-image img-responsive" src="../img/CarBigLogo/FengTian.png"
+										                         alt="FengTianLogo">
+										                </div>
+										                <div class="col-md-7">
+										
+										                    <h2 class="feature-heading">丰田<span class="text-muted">是一家总部设在日本汽车制造公司</span>
+										                    </h2>
+										
+										                    <p class="lead">
+																					丰田汽车公司（Toyota Motor Corporation），简称丰田（TOYOTA），是一家总部设在日本爱知县丰田市和东京都文京区的日本汽车制造公司，属于三井(Mitsui)财阀。<br/>
+																					2012年共售973万辆车，2013年度预计生产1010万辆汽车，是第一个达到年产量千万台以上的车厂。<br/>
+																					而丰田亦是雷克萨斯、斯巴鲁品牌的母公司及富士重工的最大股东。<br/>  
+																					2016年位居《财富》世界500强第8位。10月，丰田汽车公司排2016年全球100大最有价值品牌第5名。<br/>
+																					2017年6月，WPP和Kantar Millward Brown共同发布“2017年BrandZ全球最具价值品牌100强”榜单，丰田排名第30。
+										
+																				</p>
+										                </div>
+										            </div>
+										     </div>
+												
+												
+												<!--大众车系介绍-->
+												 <div class="tab-pane" id="DaZhong">
+										            <div class="row feature">
+										                <div class="col-md-7">
+										
+										                    <h2 class="feature-heading">大众<span class="text-muted">世界四大汽车生产商之一的大众集团的核心企业</span></h2>
+										
+										                    <p class="lead">
+																					大众汽车（德语：Volkswagen）是一家总部位于德国沃尔夫斯堡的汽车制造公司，
+																					也是世界四大汽车生产商之一的大众集团的核心企业。2016年位居《财富》世界500强第7位。<br/>
+																					Volks在德语中意思为“国民”，Wagen在德语中意思为“汽车”，全名的意思即“国民的汽车”，故又常简称为“VW”。<br/>
+																					台湾译为福斯汽车，港澳、大陆译为大众汽车或福士汽车，意思是“人民的汽车”。<br/>
+																					整个汽车集团在2012年产销超过907万辆，大众品牌则超过574万辆。
+																				</p>
+										                </div>
+										                <div class="col-md-5">
+										                    <img class="feature-image img-responsive" src="../img/CarBigLogo/DaZhongLogo.png"
+										                         alt="DaZhongLogo">
+										                </div>
+										            </div>
+										     </div>
+													 
+												<!--日产车系介绍-->
+												<div class="tab-pane" id="RiChan">
+												            <div class="row feature">
+												                <div class="col-md-7">
+												
+												                    <h2 class="feature-heading">日产<span class="text-muted">日本的一家汽车制造商</span></h2>
+												
+												                    <p class="lead">
+																							日产（NISSAN ），是日本的一家汽车制造商，由鲇川义介(Aikawa Yoshisuke)于1933年在神奈川县横滨市成立，目前在二十个国家和地区（包括日本）设有汽车制造基地，
+																							并在全球160多个国家和地区提供产品和服务。<br/>
+																							公司经营范围包括汽车产品和船舶设备的制造、销售和相关业务，现任总裁兼首席执行官为卡洛斯·戈恩（Carlos Ghosn）。1999年，雷诺与日产汽车结成独立的合作伙伴关系，
+																							在广泛的领域中展开战略性的合作，日产汽车通过联盟将事业区域拓展至全球，其经济规模大幅增长。<br/>
+																							“NISSAN’（ニッサン）是日语 “日产”两个字的罗马音形式，是日本产业的简称，其含义是 “以人和汽车的明天为目标”。<br/>
+																							图形商标是将NISSAN放在一个火红的太阳上，简明扼要地表明了公司名称，突出了所在国家的形象，这在汽车商标文化中独树一帜。
+																						</p>
+												                </div>
+												                <div class="col-md-5">
+												                    <img class="feature-imageRiChan" src="../img/CarBigLogo/RiChan.png"
+												                         alt="RiChanLogo">
+												                </div>
+												            </div>
+												     </div>
+													 
+												<!--宝马汽车系介绍-->
+												<div class="tab-pane" id="BaoMa">
+																		<div class="row feature">
+																				<div class="col-md-7">
+												
+																						<h2 class="feature-heading">宝马<span class="text-muted">以高级轿车为主导，并生产享誉全球的飞机引擎、越野车和摩托车的企业集团</span></h2>
+												
+																						<p class="lead">
+																							宝马(BMW)是享誉世界的豪华汽车品牌。宝马的车系有1、2、3、4、5、6、7、i、X、Z等几个系列，还有在各系基础上进行改进的M系（宝马官方的高性能改装部门）。<br/>
+																							宝马公司创建于1916年，总部设在德国巴伐利亚州慕尼黑。BMW的蓝白标志宝马总部所在地巴伐利亚州州旗的颜色。<br/>
+																							百年来，宝马汽车由最初的一家飞机引擎生产厂发展成为以高级轿车为主导，并生产享誉全球的飞机引擎、越野车和摩托车的企业集团，名列世界汽车公司前列。宝马也被译为“巴依尔”。<br/>
+																		          2018年7月10日，长城公司与宝马公司签署合资协议，合资成立光束汽车有限公司。
+																						</p>
+																				</div>
+																				<div class="col-md-5">
+																						<img class="feature-image img-responsive" src="../img/CarBigLogo/BMWLogo.png"
+																								alt="BaoMaLogo">
+																				</div>
+																		</div>
+														</div>
+													
+												<!--福特汽车系介绍-->
+												<div class="tab-pane" id="FuTe">
+																		<div class="row feature">
+																				<div class="col-md-7">
+												
+																						<h2 class="feature-heading">福特<span class="text-muted">是世界著名的汽车品牌</span></h2>
+												
+																						<p class="lead">
+																							福特（Ford）是世界著名的汽车品牌，为美国福特汽车公司（Ford Motor Company）旗下的众多品牌之一，公司及品牌名“福特”来源于创始人亨利·福特（Henry Fo,brd）的姓氏。<br/>
+																							福特汽车公司是世界上最大的汽车生产商之一，成立于1903年，旗下拥有福特（Ford）和林肯（Lincoln）汽车品牌，总部位于,密歇根州 迪尔伯恩市（Dearborn）。<br/>
+																							除了制造汽车，公司还设有金融服务部门即福特信贷（Ford Credit），主要经营购车金融、车辆租赁和汽车保险方面的业务。<br/>
+																							2017年6月6日，《2017年BrandZ最具价值全球品牌100强》公布，福特名列第83位。
+																						</p>
+																				</div>
+																				<div class="col-md-5">
+																						<img class="feature-image img-responsive" src="../img/CarBigLogo/FuTeLogo.png"
+																								alt="BaoMaLogo">
+																				</div>
+																		</div>
+														</div>
+										
+												<!--兰博基尼车系介绍-->
+												<div class="tab-pane" id="LanBoJiNi">
+														<div class="row feature">
+																	<div class="col-md-7">
+														
+																		<h2 class="feature-heading">兰博基尼<span class="text-muted">全球顶级跑车制造商及欧洲奢侈品标志之一</span></h2>
+																				<p class="lead">
+																						兰博基尼（Automobili Lamborghini S.p.A.）是一家意大利汽车生产商，全球顶级跑车制造商及欧洲奢侈品标志之一，<br/>
+																						公司坐落于意大利圣亚加塔·波隆尼（Sant'Agata Bolognese），由费鲁吉欧·兰博基尼在1963年创立。<br/>
+																						兰博基尼早期由于经营不善，于1980年破产；数次易主后，1998年归入奥迪旗下，现为大众集团（Volkswagen Group）旗下品牌之一。<br/>
+																						兰博基尼的标志是一头充满力量、正向对方攻击的斗牛，与大马力高性能跑车的特性相契合，同时彰显了创始人斗牛般不甘示弱的个性。		
+																				</p>
+																	</div>
+																	<div class="col-md-5">
+																				<img class="feature-image img-responsive" src="../img/CarBigLogo/LanBoJiNi.png"
+																										alt="LanBoJiNiLogo">
+																	</div>
+															</div>
+													</div>
+													
+													<!--保时捷车系介绍-->
+													<div class="tab-pane" id="BaoShiJie">
+														<div class="row feature">
+																<div class="col-md-7">
+													
+																	<h2 class="feature-heading">保时捷<span class="text-muted">是德国大众汽车集团旗下的豪华汽车品牌</span></h2>
+													
+																	    <p class="lead">
+																				保时捷（Porsche)，是德国大众汽车集团旗下的豪华汽车品牌，又叫波尔舍，总部位于德国斯图加特，是欧美汽车的主要代表。主要车型有911、Boxster、Cayman、Panamera、Cayenne、Macan。
+																				1931年,保时捷成立于斯图加特，以生产高级跑车闻名于世界车坛。创始人费迪南德·波尔舍（同费迪南德·保时捷）是一位享誉世界车坛的著名设计师。				
+																			</p>
+																</div>
+																<div class="col-md-2">
+																			<img class="feature-imageBaoShiJie" src="../img/CarBigLogo/BaoShiJieLogo.png"
+																									alt="BaoShiJieLogo" >
+																</div>
+														 </div>
+													</div>
+												  
+													
+													
+										</div>
+											
+											
+									</div>
+						</div>
+				</div>
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	<!--天气的制作-->
+	<div class="modal fade" id="myweather" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width:700px">
+					
+				<div class="modal-content" style="height:600px">
+								<div class="modal-header"><!--头部-->
+										<!--搜索框-->
+										<textarea class="form-control" id="inputlocation"></textarea>
+										<button class="btn btn-success" type="button" id="search">搜索</button>
+										<h3 class="modal-title" id="myModalLabel">
+											天气情况
+										</h3>
+									
+								</div>
+								
+										<div class="modal-body" ><!--中间部分-->
+												
+														<!--中山天气信息-->
+														<div class="tab-pane active" id="zhongshanweather">
+															
+															<!--显示中山图片信息-->
+															<div class="zhongshanpc">
+															</div>
+															<!--今日天气情况-->
+															<div class="TodayWeather">
+																<img src="../img/WeatherAndMap/location.png" width="50" height="50" id="locationPC">
+																<!--中山文字，通过api获取-->
+																<span id="locationText"></span>
+																<!--天气图片-->
+																<div id="WeatherPC">
+																</div>
+																<!--天气状况-->
+																<span class="Weathersituation"><span id="WeathersituationTxt"></span></span>
+																<!--温差-->
+																<span class="lowHighTemptext"><span id="lowTemp"></span><span id="highTemp"></span></span>
+																<!--当地时间-->
+																<span id="LocalTime"></span>
+																<span id="humidity"><span id="humidityvalue"></span></span>
+															</div>
+															<!--未来两天天气预报-->
+															<div class="ThreeDayWeather">
+																<!--未来一天的天气信息-->
+																<div class="TheFirstDayWeather">
+																	
+																	<!--未来一天日期-->
+																	<span id="futureoneday"></span>
+																	<!--未来一天天气图片-->
+																	<div class="futureonePC">
+																	</div>
+																	<!--天气信息字段-->
+																	<span id="futureone"></span>
+																	<!--温度-->
+																	<span id="lowTemponeday"></span>
+																	<span id="highTemponeday"></span>
+																	<!--未来一天相对湿度-->
+																	<span id="futureonehumidity"></span>
+																</div>
+																<!--未来第二天的天气信息-->
+																<div class="TheSecondDayWeather">
+																	
+																	<!--未来二天日期-->
+																	<span id="futureSecondday"></span>
+																	<!--未来第二天天气图片-->
+																	<div class="futureSecondPC">
+																	</div>
+																	<!--天气信息字段-->
+																	<span id="futureSecond"></span>
+																	<!--温度-->
+																	<span id="lowTempSecondday"></span>
+																	<span id="highTempSecondday"></span>
+																	<!--未来第二天相对湿度-->
+																	<span id="futureSecondhumidity"></span>
+																</div>
+															</div>
+														</div>
+												<div class="modal-footer"><!--底部-->
+												</div>
+										</div>
+										
+					</div>
+			</div>
+	</div>
+	
+	
+	
+	
+	<!--地图的制作-->
+	<div class="modal fade" id="mylocation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" style="width:1150px">
+					
+				<div class="modal-content" style="height:575px">
+								<div class="modal-header" id="app"><!--头部-->
+								<p class="IPTest">IP测试:14.114.0.0~14.115.79.255</p>
+								<p class="NowLocation">当前位置:<span class="mapgetlocation"></span></p>
+										<!--搜索框-->
+										<textarea class="form-control" id="IPtext" placeholder="请输入IP地址"></textarea>
+										<textarea class="form-control" id="mapinputlocation"  placeholder="请输入行政区域"></textarea>
+										<button class="btn btn-success" type="button" id="mapsearch">搜索</button>
+										<button class="btn btn-primary" type="button" id="IPsearch">查询</button>
+										<h3 class="modal-title" id="myModalLabel">
+											位置
+										</h3>
+								</div>
+								
+										<div class="modal-body" ><!--中间部分-->
+											  
+												<div class="tab-content">
+															<!--整个地图容器-->
+												<div class="tab-pane active" id="zhongshanlocation">
+															<!--地图容器-->
+															<div id="container">
+													
+															</div>
+									
+												</div>
+												</div>
+
+												<div class="modal-footer"><!--底部-->
+												</div>
+										
+										</div>
+
+				</div>
+										
+					</div>
+			</div>
+			
+		<a href="javascript:;" id="btn" title="回到顶部"></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--通过和风天气API获取数据-->
+	
+	<script>
+		
+		function loadXMLDoc() {
+			var xmlhttp;
+			
+		
+			if (window.XMLHttpRequest) {
+				//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+				xmlhttp = new XMLHttpRequest();
+			}
+			else {
+				// IE6, IE5 浏览器执行代码
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		
+		   /*回调事件处理器*/
+			xmlhttp.onreadystatechange = function () {
+				
+				/*请求完成加载并且响应成功*/
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					console.log(JSON.parse(xmlhttp.responseText));//将一个json字符串转化为json对象
+					var data = JSON.parse(xmlhttp.responseText);
+					
+					/*当天天气信息*/
+					document.getElementById("locationText").innerHTML=data.HeWeather6[0].basic.location;//位置
+					document.getElementById("WeathersituationTxt").innerHTML="天气:&nbsp;"+data.HeWeather6[0].daily_forecast[0].cond_txt_d;//白天天气信息
+					document.getElementById("lowTemp").innerHTML="温度:&nbsp;"+data.HeWeather6[0].daily_forecast[0].tmp_min+"&nbsp;~&nbsp;";//最低温度
+					document.getElementById("highTemp").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+data.HeWeather6[0].daily_forecast[0].tmp_max+"℃";//最高温度
+					document.getElementById("LocalTime").innerHTML=data.HeWeather6[0].daily_forecast[0].date;//当地时间
+					document.getElementById("humidity").innerHTML="相对湿度:&nbsp;"+data.HeWeather6[0].daily_forecast[0].hum;//相对湿度
+					if(data.HeWeather6[0].basic.location=="深圳")/*坐标深圳*/
+					{
+						$zhongshanpc=$(".zhongshanpc");
+						$zhongshanpc.css("background-image","url(../img/WeatherAndMap/shenzhen.jpg)");
+						$zhongshanpc.css("background-repeat","no-repeat");
+						$zhongshanpc.css("background-size","400px 330px");
+
+					}
+					if(data.HeWeather6[0].basic.location=="拉萨")/*坐标拉萨*/
+					{
+						$zhongshanpc=$(".zhongshanpc");
+						$zhongshanpc.css("background-image","url(../img/WeatherAndMap/lasa.jpg)");
+						$zhongshanpc.css("background-repeat","no-repeat");
+						$zhongshanpc.css("background-size","400px 330px");
+					
+					}
+					if(data.HeWeather6[0].basic.location=="中山")/*坐标拉萨*/
+					{
+						$zhongshanpc=$(".zhongshanpc");
+						$zhongshanpc.css("background-image","url(../img/WeatherAndMap/zhongshan.jpg)");
+						$zhongshanpc.css("background-repeat","no-repeat");
+						$zhongshanpc.css("background-size","400px 330px");
+					
+					}
+					
+					
+					
+					
+					/*当天天气信息*/
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="多云")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/cloudy.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="晴")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/sunnyPC.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="阴")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/dark.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="中雨")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="小雨")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/lightrain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="大雨")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/heavrRain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="阵雨")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[0].cond_txt_d=="雷阵雨")
+					{
+						$WeatherPC=$("#WeatherPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					/*当天天气信息*/
+					
+					
+					
+				  /*未来一天的天气信息*/
+				  document.getElementById("futureoneday").innerHTML=data.HeWeather6[0].daily_forecast[1].date;//获取日期
+					document.getElementById("futureone").innerHTML=data.HeWeather6[0].daily_forecast[1].cond_txt_d;//获取天气
+					document.getElementById("lowTemponeday").innerHTML=data.HeWeather6[0].daily_forecast[1].tmp_min+"&nbsp;&nbsp;&nbsp;~&nbsp;";//最低温度
+					document.getElementById("highTemponeday").innerHTML=data.HeWeather6[0].daily_forecast[1].tmp_max+"℃";//最高温度
+					document.getElementById("futureonehumidity").innerHTML="相对湿度:&nbsp;"+data.HeWeather6[0].daily_forecast[1].hum;//相对湿度
+					<!--加载图片-->
+					if(data.HeWeather6[0].daily_forecast[1].cond_txt_d=="晴")
+					{
+						$futureonePC=$(".futureonePC");
+						$futureonePC.css("background-image","url(../img/WeatherAndMap/sunnyPC.jpg)");
+						$futureonePC.css("background-repeat","no-repeat");
+						$futureonePC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[1].cond_txt_d=="多云")
+					{
+						$futureonePC=$(".futureonePC");
+						$futureonePC.css("background-image","url(../img/WeatherAndMap/cloudy.jpg)");
+						$futureonePC.css("background-repeat","no-repeat");
+						$futureonePC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[1].cond_txt_d=="小雨")
+					{
+						$futureonePC=$(".futureonePC");
+						$futureonePC.css("background-image","url(../img/WeatherAndMap/lightrain.jpg)");
+						$futureonePC.css("background-repeat","no-repeat");
+						$futureonePC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[1].cond_txt_d=="阴")
+					{
+						$futureonePC=$(".futureonePC");
+						$futureonePC.css("background-image","url(../img/WeatherAndMap/dark.jpg)");
+						$futureonePC.css("background-repeat","no-repeat");
+						$futureonePC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[1].cond_txt_d=="阵雨")
+					{
+						$WeatherPC=$(".futureonePC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[1].cond_txt_d=="雷阵雨")
+					{
+						$WeatherPC=$(".futureonePC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					/*未来一天的天气信息*/
+
+					
+					
+					/*未来第二天的天气信息*/
+					document.getElementById("futureSecondday").innerHTML=data.HeWeather6[0].daily_forecast[2].date;//获取日期
+					document.getElementById("futureSecond").innerHTML=data.HeWeather6[0].daily_forecast[2].cond_txt_d;//获取天气
+					document.getElementById("lowTempSecondday").innerHTML=data.HeWeather6[0].daily_forecast[2].tmp_min+"&nbsp;&nbsp;&nbsp;~&nbsp;";//最低温度
+					document.getElementById("highTempSecondday").innerHTML=data.HeWeather6[0].daily_forecast[2].tmp_max+"℃";//最高温度
+					document.getElementById("futureSecondhumidity").innerHTML="相对湿度:&nbsp;"+data.HeWeather6[0].daily_forecast[2].hum;//相对湿度
+					<!--加载图片-->
+					if(data.HeWeather6[0].daily_forecast[2].cond_txt_d=="晴")
+					{
+						$futureSecondPC=$(".futureSecondPC");
+						$futureSecondPC.css("background-image","url(../img/WeatherAndMap/sunnyPC.jpg)");
+						$futureSecondPC.css("background-repeat","no-repeat");
+						$futureSecondPC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[2].cond_txt_d=="多云")
+					{
+						$futureSecondPC=$(".futureSecondPC");
+						$futureSecondPC.css("background-image","url(../img/WeatherAndMap/cloudy.jpg)");
+						$futureSecondPC.css("background-repeat","no-repeat");
+						$futureSecondPC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[2].cond_txt_d=="小雨")
+					{
+						$futureSecondPC=$(".futureSecondPC");
+						$futureSecondPC.css("background-image","url(../img/WeatherAndMap/lightrain.jpg)");
+						$futureSecondPC.css("background-repeat","no-repeat");
+						$futureSecondPC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[2].cond_txt_d=="阴")
+					{
+						$futureSecondPC=$(".futureSecondPC");
+						$futureSecondPC.css("background-image","url(../img/WeatherAndMap/dark.jpg)");
+						$futureSecondPC.css("background-repeat","no-repeat");
+						$futureSecondPC.css("background-size","150px 135px")
+					}
+					if(data.HeWeather6[0].daily_forecast[2].cond_txt_d=="阵雨")
+					{
+						$WeatherPC=$(".futureSecondPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					if(data.HeWeather6[0].daily_forecast[2].cond_txt_d=="雷阵雨")
+					{
+						$WeatherPC=$(".futureSecondPC");
+						$WeatherPC.css("background-image","url(../img/WeatherAndMap/rain.jpg)");
+						$WeatherPC.css("background-repeat","no-repeat");
+						$WeatherPC.css("background-size","283px 130px");
+					}
+					/*未来第二天的天气信息*/
+				}
+			}
+			
+			/*输入获得文本框值，可获得该城市的天气信息*/
+			$inputlocationweather=$("#inputlocation");
+			$searchweather=$("#search");
+			$searchweather.click(function()
+			{
+				var location=$inputlocationweather.val()+"";
+				var key="&"+"key"+"="+"dad99f28d0e344ecb45765e293f075c6";
+				/*实例化成功之后，发送HTTP请求是异步进行的*/
+				xmlhttp.open("GET", "https://free-api.heweather.com/s6/weather/forecast?location="+location+key, true);
+				xmlhttp.send();//发送请求
+			});
+				
+		}
+		loadXMLDoc();
+		
+	</script>
+	
+	
+	<!--通过高德地图IP自动定位-->
+	<script>
+		function getLocationFromIP()
+		{
+				var LocationIP;
+				if (window.XMLHttpRequest) {
+					//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+					LocationIP = new XMLHttpRequest();
+				}
+				else {
+					// IE6, IE5 浏览器执行代码
+					LocationIP = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				LocationIP.onreadystatechange = function ()
+				{
+					if (LocationIP.readyState == 4 && LocationIP.status == 200) 
+					{
+						console.log(JSON.parse(LocationIP.responseText));
+						var data = JSON.parse(LocationIP.responseText);
+						
+						$inputlocation=$("#mapinputlocation");
+						$inputlocation.val(data.city);/*根据获取到的信息传值给地图显示文本框*/
+					}
+				}
+				$IPtext=$("#IPtext");
+				$IPsearch=$("#IPsearch");
+				$IPsearch.click(function()
+				{
+					var IPtextone=$IPtext.val()+"";
+					var key="&"+"key"+"="+"55a28100b9c28237604d88655f545317";
+					LocationIP.open("GET", "https://restapi.amap.com/v3/ip?ip="+IPtextone+key, true);
+					LocationIP.send();
+				});
+			
+		}
+		getLocationFromIP();
+	</script>
+	
+	
+	
+	<!--通过高德地图API获取数据-->
+	
+	<script>
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        //zoom:11,
+        //center: [116.397428, 39.90923]
+    });
+		/*通过读取文本框的值获取地理位置信息*/
+		$inputlocation=$("#mapinputlocation");
+		$search=$("#mapsearch");
+		$search.click(function()
+		{
+			var maplocation=$inputlocation.val()+"";
+			map.setCity(maplocation);
+			/*显示到当前位置属性*/
+			$mapgetlocation=$(".mapgetlocation");
+			$mapgetlocation.html($inputlocation.val());
+		});
+	
+</script>
+	
+	
+	
+	<script>
+		$FengTianCarmy=$("#buttomone");
+		$FengPuLaDuo=$("#buttomtwo");
+		$FengHanLanDa=$("#buttomthree");
+		$FengLeiLing=$("#buttomfour");
+		$FengYiZe=$("#buttomfive");
+		$FengZhiXuan=$("#buttomsix");
+		
+		
+		/*点击凯美瑞立即购买按钮*/
+		$FengTianCarmy.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			/*setTimeout(() => {
+				popup.postMessage('Carmary', '*');
+			}, 1);*/
+			/*延迟函数
+			*/
+			setTimeout(function()
+			{
+				popup.postMessage('Carmary', '*');
+			},0);
+		});
+		
+		
+		/*点击普拉多立即购买按钮*/
+		$FengPuLaDuo.click(function()
+		{
+			var popup = window.open('../../HTML/ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('PaLaDuo', '*');
+			},0);
+		});
+		
+		
+		/*点击汉兰达立即购买按钮*/
+		$FengHanLanDa.click(function()
+		{
+			var popup = window.open('../../HTML/ShopUI.html');
+			setTimeout(function()
+			{
+			popup.postMessage('HanLanDa', '*');
+			},0);
+		});
+		
+		
+		/*点击雷凌立即购买按钮*/
+		$FengLeiLing.click(function()
+		{
+			var popup = window.open('../../HTML/ShopUI.html');
+			setTimeout(function()
+			{
+			popup.postMessage('LeiLing', '*');
+			},0);
+		});
+		
+		
+		
+		/*点击奕泽立即购买按钮*/
+		$FengYiZe.click(function()
+		{
+			var popup = window.open('../../HTML/ShopUI.html');
+			setTimeout(function()
+			{
+			popup.postMessage('YiZe', '*');
+			},0);
+		});
+		
+		/*点击致炫立即购买按钮*/
+		$FengZhiXuan.click(function()
+		{
+			var popup = window.open('../../HTML/ShopUI.html');
+			setTimeout(function()
+			{
+			popup.postMessage('ZhiXuan', '*');
+			},0);
+		});
+	</script>
+	<script>
+		$BenCRV=$("#BenTianbuttom1");
+		$BenLingPai=$("#BenTianbuttom2");
+		$BenSiYu=$("#BenTianbuttom3");
+		$BenYaGe=$("#BenTianbuttom4");
+		$BenGeShiTu=$("#BenTianbuttom5");
+		$BenAoDeiSai=$("#BenTianbuttom6");
+		
+		/*点击本田CRV立即购买按钮*/
+		$BenCRV.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('CRV', '*');
+			},0);
+		});
+		
+		/*点击凌派立即购买按钮*/
+		$BenLingPai.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('LingPai', '*');
+			},0);
+		});
+		
+		/*点击思域立即购买按钮*/
+		$BenSiYu.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('SiYu', '*');
+			},0);
+		});
+		
+		/*点击雅阁立即购买按钮*/
+		$BenYaGe.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('YaGe', '*');
+			},0);
+		});
+		
+		/*点击歌诗图立即购买按钮*/
+		$BenGeShiTu.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('GeShiTu', '*');
+			},0);
+		});
+		
+		/*点击奥德赛立即购买按钮*/
+		$BenAoDeiSai.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('AoDeiSai', '*');
+			},0);
+		});
+		
+	</script>
+	  
+		<!--大众-->
+	<script>
+			 $Huiyang=$("#dazhongbuttom1");
+			 $CC=$("#dazhongbuttom2");
+			 $cross=$("#dazhongbuttom3");
+			 $inset=$("#dazhongbuttom4");
+			 $TuiRui=$("#dazhongbuttom5");
+			 $MaiTeng=$("#dazhongbuttom6");
+			 
+			 /*点击辉扬立即购买按钮*/
+			 $Huiyang.click(function()
+			 {
+			 	var popup = window.open('ShopUI.html');
+			 	setTimeout(function()
+			 	{
+			 		popup.postMessage('HuiYang', '*');
+			 	},0);
+			 });
+			 
+			 
+			 /*点击CC立即购买按钮*/
+			 $CC.click(function()
+			 {
+			 	var popup = window.open('ShopUI.html');
+			 	setTimeout(function()
+			 	{
+			 		popup.postMessage('CC', '*');
+			 	},0);
+			 });
+			 
+			 
+			 
+			 /*点击Cross立即购买按钮*/
+			 $cross.click(function()
+			 {
+			 	var popup = window.open('ShopUI.html');
+			 	setTimeout(function()
+			 	{
+			 		popup.postMessage('cross', '*');
+			 	},0);
+			 });
+			 
+			 
+			 
+			 /*点击甲壳虫立即购买按钮*/
+			 $inset.click(function()
+			 {
+			 	var popup = window.open('ShopUI.html');
+			 	setTimeout(function()
+			 	{
+			 		popup.postMessage('inset', '*');
+			 	},0);
+			 });
+			 
+			 
+			 
+			 /*点击途锐立即购买按钮*/
+			 $TuiRui.click(function()
+			 {
+			 	var popup = window.open('ShopUI.html');
+			 	setTimeout(function()
+			 	{
+			 		popup.postMessage('TuRui', '*');
+			 	},0);
+			 });
+			 
+			 
+			 
+			 /*点击迈腾立即购买按钮*/
+			 $MaiTeng.click(function()
+			 {
+			 	var popup = window.open('ShopUI.html');
+			 	setTimeout(function()
+			 	{
+			 		popup.postMessage('MaiTeng', '*');
+			 	},0);
+			 });
+			 
+		 </script>
+		
+	<!--日产-->
+	<script>
+		$Tian=$("#richanbuttom1");
+		$GuiShi=$("#richan#buttom2");
+		$QiJun=$("#richanbuttom3");
+		$XuanYi=$("#richanbuttom4");
+		$LouLan=$("#richanbuttom5");
+		$GTR=$("#richanbuttom6");
+		
+		/*点击天籁立即购买按钮*/
+		$Tian.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('tian', '*');
+			},0);
+		});
+		
+		
+		/*点击贵士立即购买按钮*/
+		$GuiShi.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('guishi', '*');
+			},0);
+		});
+		
+		/*点击奇骏立即购买按钮*/
+		$QiJun.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('qijun', '*');
+			},0);
+		});
+		
+		
+		
+		/*点击轩逸立即购买按钮*/
+		$XuanYi.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('xuanyi', '*');
+			},0);
+		});
+		
+		
+		
+		/*点击楼兰立即购买按钮*/
+		$LouLan.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('loulan', '*');
+			},0);
+		});
+		
+		
+		
+		/*点击GTR立即购买按钮*/
+		$GTR.click(function()
+		{
+			var popup = window.open('ShopUI.html');
+			setTimeout(function()
+			{
+				popup.postMessage('GTR', '*');
+			},0);
+		});
+		
+	</script>	
+	
+	
+<!--宝马-->
+	<script>
+		$BMW525i=$("#BaoMabuttom1");
+		$M6=$("#BaoMabuttom2");
+		$X6=$("#BaoMabuttom3");
+		$i8=$("#BaoMabuttom4");
+		$BMW2=$("#BaoMabuttom5");
+		$BMW7=$("#BaoMabuttom6");
+		
+		/*点击宝马525i立即购买按钮*/
+		$BMW525i.click(function()
+		{
+		var popup = window.open('ShopUI.html');
+		setTimeout(function()
+		{
+			popup.postMessage('BMW525i', '*');
+		},0);
+		});
+		
+		
+		/*点击M6立即购买按钮*/
+		$M6.click(function()
+		{
+		var popup = window.open('ShopUI.html');
+		setTimeout(function()
+		{
+			popup.postMessage('M6', '*');
+		},0);
+		});
+		
+		/*点击X6立即购买按钮*/
+		$X6.click(function()
+		{
+		var popup = window.open('ShopUI.html');
+		setTimeout(function()
+		{
+			popup.postMessage('X6', '*');
+		},0);
+		});
+		
+		
+		
+		/*点击i8立即购买按钮*/
+		$i8.click(function()
+		{
+		var popup = window.open('ShopUI.html');
+		setTimeout(function()
+		{
+			popup.postMessage('i8', '*');
+		},0);
+		});
+		
+		
+		
+		/*点击BMW2立即购买按钮*/
+		$BMW2.click(function()
+		{
+		var popup = window.open('ShopUI.html');
+		setTimeout(function()
+		{
+			popup.postMessage('BMW2', '*');
+		},0);
+		});
+		
+		
+		
+		/*点击BMW7立即购买按钮*/
+		$BMW7.click(function()
+		{
+		var popup = window.open('ShopUI.html');
+		setTimeout(function()
+		{
+			popup.postMessage('BMW7', '*');
+		},0);
+		});
+	</script>	
+		
+		<script>
+			$zhisheng=$("#futebuttom1");
+			$fukesi=$("#futebuttom2");
+			$jianianhua=$("#futebuttom3");
+			$mengdiou=$("#futebuttom4");
+			$tanxianzhe=$("#futebuttom5");
+			$furuisi=$("#futebuttom6");
+			
+			
+			
+			/*点击福特致胜立即购买按钮*/
+			$zhisheng.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('zhisheng', '*');
+				},0);
+			});
+			
+			
+			/*点击福克斯立即购买按钮*/
+			$fukesi.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('fukesi', '*');
+				},0);
+			});
+			
+			/*点击嘉年华立即购买按钮*/
+			$jianianhua.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('jianianhua', '*');
+				},0);
+			});
+			
+			
+			
+			/*点击蒙迪欧立即购买按钮*/
+			$mengdiou.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('mengdiou', '*');
+				},0);
+			});
+			
+			
+			
+			/*点击探险者立即购买按钮*/
+			$tanxianzhe.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('tanxianzhe', '*');
+				},0);
+			});
+			
+			
+			
+			/*点击福睿斯立即购买按钮*/
+			$furuisi.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('furuisi', '*');
+				},0);
+			});
+			
+			
+			
+		</script>
+		<!--保时捷-->
+		<script>
+			$kayan=$("#baoshijiebuttom1");
+			$Bao911=$("#baoshijiebuttom2");
+			$Pan=$("#baoshijiebuttom3");
+			$Bao718=$("#baoshijiebuttom4");
+			$MissionE=$("#baoshijiebuttom5");
+			$Cayenne=$("#baoshijiebuttom6");
+			
+			
+			
+			
+			/*点击Kayan立即购买按钮*/
+			
+			$kayan.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('kayan', '*');
+				},0);
+			});
+			
+		
+			
+			/*点击Bao911立即购买按钮*/
+			$Bao911.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('Bao911', '*');
+				},0);
+			});
+			
+			/*点击Bao718立即购买按钮*/
+			$Bao718.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('Bao718', '*');
+				},0);
+			});
+			
+			
+			
+			/*点击MissionE立即购买按钮*/
+			$MissionE.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('missionE', '*');
+				},0);
+			});
+			
+			/*点击Cayenne立即购买按钮*/
+			$Cayenne.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('Cayenne', '*');
+				},0);
+			});
+			
+			/*点击Pan立即购买按钮*/
+			$Pan.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('Pan', '*');
+				},0);
+			});
+		</script>
+		
+		<script>
+			$URUS=$("#lanbojinibuttom1");
+			$Huracan=$("#lanbojinibuttom2");
+			$Avent=$("#lanbojinibuttom3");
+			$cen=$("#lanbojinibuttom4");
+			
+			/*点击URUS立即购买按钮*/
+			$URUS.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('URUS', '*');
+				},0);
+			});
+			
+			
+			/*点击Huracan立即购买按钮*/
+			$Huracan.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('huracan', '*');
+				},0);
+			});
+			
+			/*点击Avent立即购买按钮*/
+			$Avent.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('avent', '*');
+				},0);
+			});
+			
+			
+			
+			/*点击cen立即购买按钮*/
+			$cen.click(function()
+			{
+				var popup = window.open('ShopUI.html');
+				setTimeout(function()
+				{
+					popup.postMessage('cen', '*');
+				},0);
+			});
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+	</body>
+	<!--<script type="text/javascript" src="../jQuery/jquery-3.3.1.js"></script>-->
+	<script type="text/javascript" src="../js/Modal.js"></script>
+	<script type="text/javascript" src="../js/BenTian.js"></script>
+	<script type="text/javascript" src="../js/FengTian.js"></script>
+	<script type="text/javascript" src="../jQuery/jquery-3.0.0.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</html>

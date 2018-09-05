@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>订单界面</title>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="../bootstrap/Font-Awesome/css/font-awesome-ie7.css">
+		<link rel="stylesheet" href="../bootstrap/Font-Awesome/css/font-awesome-ie7.min.css">
+		<link rel="stylesheet" href="../bootstrap/Font-Awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="../bootstrap/Font-Awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/Order.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	</head>
+	
+<body>
+	
+		<div class="navbar navbar-inverse" role="navigation" id="navigation">
+			<div class="navbar-header">
+				<a href="##" class="navbar-brand">确认订单信息</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+		</div>
+		<div class="navbar navbar-default" role="navigation">
+			<ul class="nav navbar-nav">
+				<li id="Goods">用户名</li>
+				<li id="ProPerty">汽车类型</li>
+				<li id="Price">数量</li>
+				<li id="Quantity">价格</li>
+			</ul>
+		</div>	
+		
+		<!--表格依次列出信息-->
+		<ul class="list-group">
+			<span class="list-group-item" id="GoodInformation">
+				
+			</span>
+			
+			<!--第二行-->
+			<span class="list-group-item" id="LineTwo">
+				<div id="textSolder">
+					<span>给卖家留言:</span>
+					<textarea class="form-control" rows="3" placeholder="选填:填写内容已和卖家协商确认" id="textarea"></textarea>
+				</div>
+				<div id="ConTriBution">
+					<input type="checkbox" value="" id="checkbox"><span id="ConTriBute">成交后卖家将捐赠2000元给公益宝贝计划</span>
+					<span id="zeronumber">¥0.00</span>
+				</div>
+			</span>
+			
+			<!--第三行-->
+			<span class="list-group-item" id="linethree">
+				<span id="insurance">运费险：</span>	
+					<input type="checkbox" value="" id="checkboxone">
+					<span id="insuranceInformation">运费险&nbsp;卖家送，确认收货前退货可赔</span>
+					<span id="zeronumberone">¥0.00</span>
+			</span>
+			
+			<!--第四行-->
+			<span class="list-group-item" id="line-four">
+				<span id="TotalPrice">店铺合计(含运费):</span>
+				<span id="displayPrice"></span>
+			</span>
+			
+			<div class="checkcount">
+				<span id="realcount">实付款:</span>
+				<span id="User">User:</span>
+				<span id="Tel">Tel:</span>
+			</div>
+			<button class="btn btn-danger" type="button" id="button">提交按钮</button>
+			
+		</ul>	
+			
+</body>
+	<script type="text/javascript" src="../jQuery/jquery-3.0.0.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</html>

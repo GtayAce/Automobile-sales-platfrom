@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>汽车销售</title>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/ShopUI.css">
+		
+	</head>
+	
+<body>
+<div class="navbar navbar-inverse" role="navigation" id="navigation">
+	<div class="navbar-header">
+		<a href="##" class="navbar-brand">Shopping</a>
+	</div>
+	<ul class="nav navbar-nav">
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+	</ul>
+</div>
+
+<!--商品天猫图标-->
+<div class="shoppc">
+</div>
+	<div class="BuyUI">
+		<!--显示车辆大图-->
+		<div class="ShowCarUI" id="ShowCarUI">
+		</div>
+		
+		<!--显示车的不同方向-->
+		<div class="ShowCarDifferentWay">
+			
+		
+			<div class="PCOne">
+				
+			</div>
+			<div class="PCTwo">
+				
+			</div>
+			<div class="PCThree">
+				
+			</div>
+			<div class="PCFour">
+				
+			</div>
+			
+		</div>
+		
+		
+		<div class="ShopInformation">
+			<div class="title">
+				
+			</div>
+			<span id="CarName">汽车名:</span>
+			<span id="price">价格:<span id="pricenumber"></span></span>
+			<span id="QuanTity">数量:</span>
+			<span id="property">性能:</span>
+			<input type="number" min="1"max="10" step="1" value="1" id="number">
+			<span id="inventory">库存:</span>
+			<button class="btn btn-danger" type="button" id="buttom">加入购物车</button> 
+			<a href="#myModal" data-toggle="modal" data-target="#myModal"><button class="btn btn-success" type="button" id="buttomone">立即购买</button></a>
+		</div>
+		
+	</div>
+	
+
+	
+	<!--订单模态框-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width:1290px">	
+			<div class="modal-content" style="height:63
+			0px">
+				<div class="modal-header"><!--头部-->					
+					<h4 class="modal-title" id="myModalLabel">
+							确认订单信息
+					</h4>				
+				</div>
+												
+				<div class="modal-body"><!--中间部分-->
+					<div class="navbar navbar-default" role="navigation">
+						<ul class="nav navbar-nav">
+							<li id="Goods">汽车型号</li>
+							<li id="ProPerty">商品属性</li>
+							<li id="Price">单价</li>
+							<li id="Quantity">数量</li>
+							<li id="Total">小计</li>
+						</ul>
+					</div>
+					<h5>店铺:</h5>
+					
+					<!--表格依次列出信息-->
+					<ul class="list-group">
+						<span class="list-group-item" id="GoodInformation">
+							
+						</span>
+						
+						<!--第二行-->
+						<span class="list-group-item" id="">
+							<div id="textSolder">
+								<span>给卖家留言:</span>
+								<textarea class="form-control" rows="3" placeholder="选填:填写内容已和卖家协商确认" id="textarea"></textarea>
+							</div>
+							<div id="ConTriBution">
+								<input type="checkbox" value=""><span id="ConTriBute">成交后卖家将捐赠2000元给公益宝贝计划</span>
+								<span id="zeronumber">0.00</span>
+							</div>
+						</span>
+						
+						<!--第三行-->
+						<span class="list-group-item" id="">
+							<span id="insurance">运费险：</span>	
+								<input type="checkbox" value="">
+								<span id="">运费险</span>
+								<span>卖家送，确认收货前退货可赔</span>
+								<span id="zeronumberone">0.00</span>
+						</span>
+						
+						<!--第四行-->
+						<span class="list-group-item">
+							<span id="TotalPrice">店铺合计(含运费)</span>
+						</span>
+						
+						<!--实际统计金额-->
+					   	<div id="checkcount">
+							<span id="Realcount">实付款:</span>
+							
+							<span id="Consignee">收货人:</span>
+							<span id="Tel">Tel:</span>
+						</div>
+					</ul>
+					
+				</div><!--中间部分-->
+							
+				<div class="modal-footer"><!--底部-->
+					<button class="btn btn-danger" type="button" id="Submitbuttom">提交订单</button> 
+					<button class="btn btn-inverse" href="#" id="close" data-dismiss="modal">取消订单</button>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+	<!-- 选项卡组件（菜单项nav-tabs）-->
+	<ul class="nav nav-tabs" role="tablist" id="feature-tab">
+		<li class="active">
+			<a href="#CarDetailpane" role="tab" data-toggle="tab" id="CarDetail">汽车详情</a>
+		</li>
+		<li>
+			<a href="#estimatepane" role="tab" data-toggle="tab" id="estimate">评价</a>
+		</li>
+	</ul>
+	
+	<!--选项卡面板-->
+	<div class="tab-content">
+		
+		<!--汽车详情-->
+		<div class="tab-pane active" id="CarDetailpane">
+			内容面板
+		</div>
+		
+		
+		<!--评价-->
+		<div class="tab-pane" id="estimatepane">
+			<!--滚动监视器-->
+			<div class="bs-docs-section">
+				<h1 class="page-header" id="scrollspy">全部评价</h1>
+					<div class="bs-example">
+						<!--内容-->
+						<div class="scrollspy-example">
+							<div class="commentone">
+								<p class="text">汽车的性能稳定,灵活自由的加减速。但是车身喷漆质量还需加强。</p>
+								<br/>
+								<p class="Time">2018-7-22&nbsp;14:30</p>
+								<p class="author">z***q(匿名)</p>
+							</div>
+							<div class="commentTwo">
+								<p class="text">汽车的性能稳定,灵活自由的加减速。但是车身喷漆质量还需加强。</p>
+								<br/>
+								<p class="Time">2018-7-22&nbsp;14:30</p>
+								<p class="author">z***q(匿名)</p>
+							</div>
+							
+							<div class="commentThree">
+								<p class="text">汽车的性能稳定,灵活自由的加减速。但是车身喷漆质量还需加强。</p>
+								<br/>
+								<p class="Time">2018-7-22&nbsp;14:30</p>
+								<p class="author">z***q(匿名)</p>
+							</div>
+						
+						</div>
+					</div><!-- /example -->
+		
+			</div>
+			
+			<hr>
+			<!--评价填写框-->
+			<div class="WriteComment">
+				<h2 align="center">需要您的建议哟！</h2>
+				<span class="CarCommentText">评价汽车:</span>
+				<textarea class="form-control" rows="5" id="textareaone"></textarea>
+				<span class="CommentService">评价服务:</span>
+				<textarea class="form-control" rows="5" id="textareatwo"></textarea>
+				<input type="checkbox" value="" id="check">
+				<p class="Anonymity">匿名评价</p>
+				<button class="btn btn-danger" type="button" id="SubmitComment">提交评价</button> 
+			</div>
+				
+		</div><!--评价-->
+
+	
+	
+</body>
+
+
+
+	<script type="text/javascript" src="../jQuery/jquery-3.0.0.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/ShopUI.js"></script> 
+</html>
