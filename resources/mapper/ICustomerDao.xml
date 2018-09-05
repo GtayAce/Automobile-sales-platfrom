@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.dao.ICustomerDao">
+    <insert id="insertCustomer">
+        insert into
+        customer (cusName,cusBirthday,cusPassword,cusRealName,cusIdCard,
+        cusAddress,cusTelephone)
+        values (#{cusName},#{cusBirthday},#{cusPassword},#{cusRealName},
+        #{cusIdCard},#{cusAddress},#{cusTelephone})
+    </insert>
+    <update id="updateCustomer">
+        update customer set  cusName=#{cusName},cusBirthday=#{cusBirthday},cusPassword=#{cusPassword},
+        cusRealName=#{cusRealName},cusIdCard=#{cusIdCard},cusAddress=#{cusAddress},cusTelephone=#{cusTelephone}
+        where id=#{id}
+    </update>
+    <update id="updateCusPassword">
+        update customer set cusPassword=#{1}
+        where id=#{0}
+    </update>
+    <delete id="deleteCustomer">
+        delete from customer where id=#{xxx}
+    </delete>
+    <select id="selectAllCus" resultType="Customer">
+        select * from customer
+    </select>
+    <select id="selectCusById" resultType="Customer">
+        select * from customer where id=#{xxx}
+    </select>
+    <select id="selectCusByName" resultType="Customer">
+        select * from customer where cusName like '%' #{xxx} '%'
+    </select>
+    <select id="selectLoginName" resultType="Customer">
+        select * from customer where  cusName=#{cusName}
+    </select>
+    <select id="selectCusByNameReach" resultType="Customer">
+        select * from customer where cusName= #{xxx}
+    </select>
+</mapper>

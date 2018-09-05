@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.dao.IReachOrderDao">
+    <select id="seltctAllReachOrder" resultType="TestOrder">
+        select orders.numbers,customer.cusName,customer.cusRealName,customer.cusAddress,customer.cusTelephone,car.carName,
+        car.carPrice,orderdetail.carNum,orders.creatTime,orders.sign
+        from orders,customer,car,orderdetail
+        where customer.id=orders.cusId and orders.id=orderdetail.orderId and car.id=carId
+    </select>
+    <select id="seltctAllReachrOrder" resultType="TestOrder">
+        select orders.numbers,customer.cusName,customer.cusRealName,customer.cusAddress,customer.cusTelephone,car.carName,
+        car.carPrice,orderdetail.carNum,orders.creatTime,orders.sign
+        from orders,customer,car,orderdetail
+        where customer.id=orders.cusId and orders.id=orderdetail.orderId and car.id=carId and orders.numbers=#{xxx}
+    </select>
+    <select id="seltctAllReachrrOrder" resultType="TestOrder">
+        select orders.numbers,customer.cusName,customer.cusRealName,customer.cusAddress,customer.cusTelephone,car.carName,
+        car.carPrice,orderdetail.carNum,orders.creatTime,orders.sign
+        from orders,customer,car,orderdetail
+        where customer.id=orders.cusId and orders.id=orderdetail.orderId and car.id=carId and customer.cusName=#{xxx}
+    </select>
+    <update id="insertSign">
+        update orders set sign=1
+        where numbers=#{numbers}
+    </update>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.dao.ICarTypeDao">
+    <insert id="insertCarType">
+        insert into cartype (carTypeName)values (#{carTypeName})
+    </insert>
+    <update id="updateCarType">
+        update cartype set carTypeName=#{carTypeName}
+        where id=#{id}
+    </update>
+    <delete id="deleteCarType">
+        delete from cartype where id=#{xxx}
+    </delete>
+    <select id="selectAllCty" resultType="CarType">
+        select * from cartype
+    </select>
+    <select id="selectCtyById" resultType="CarType">
+        select * from cartype where id=#{xxx}
+    </select>
+    <select id="selectCtyByName" resultType="CarType">
+        select * from cartype where name like '%' #{xxx} '%'
+    </select>
+    <select id="selectCtyByNameReach" resultType="CarType">
+    select * from cartype where carTypeName = #{xxx}
+    </select>
+</mapper>

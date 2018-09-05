@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.dao.IMessageWordDao">
+    <insert id="insertMessage">
+        insert into messageword
+        (mcarId,mcusId,mnote,noteCreatTime)values
+        (#{mcarId},#{mcusId},#{mnote},#{noteCreatTime})
+    </insert>
+    <select id="selectAllMessageWord" resultType="MessageWord">
+        select * from messageword
+    </select>
+    <select id="selectMessageWordByCarId" resultType="MessageWord">
+        select * from messageword where mcarId=#{mcarId}
+    </select>
+    <select id="selectMessageWordByCusId">
+        select * from messageword where mcusId=#{mcusId}
+    </select>
+    <select id="selectMessageWordCountByCarId" resultType="int">
+        select count(*) from messageword where mcarId=#{mcarId}
+    </select>
+</mapper>

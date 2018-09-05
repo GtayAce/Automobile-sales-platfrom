@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.dao.ICarDao">
+    <insert id="insertCar">
+        insert into
+        car (carTypeId,carName,carPrice,carPic,carNum,carNote)values (#{carTypeId},#{carName},#{carPrice},#{carPic},#{carNum},#{carNote})
+    </insert>
+    <update id="updateCar">
+        update car set carTypeId=#{carTypeId},carName=#{carName},carPrice=#{carPrice},carPic=#{carPic},carNum=#{carNum},carNote=#{carNote}
+        where id=#{id}
+    </update>
+    <update id="lessCar">
+        update car set carNum=carNum-1 where id=#{id}
+    </update>
+    <delete id="deleteCar">
+        delete from car where id=#{xxx}
+    </delete>
+    <select id="selectAllCrs" resultType="Car">
+        select * from car
+    </select>
+    <select id="selectCrsById" resultType="Car">
+        select * from car where id=#{xxx}
+    </select>
+    <select id="selectCrsByName" resultType="Car">
+        select * from car where name like '%' #{xxx} '%'
+    </select>
+    <select id="selectCrsByNameReach" resultType="Car">
+        select * from car where carName = #{xxx}
+    </select>
+</mapper>
