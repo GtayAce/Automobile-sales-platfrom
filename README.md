@@ -11,10 +11,11 @@
 ## 天气
 ![weather](http://pdi3m4use.bkt.clouddn.com/CarSystemWeather.png)
 # 技术框架
-该平台所涉及Web前端基本语法，页面的框架基本是Bootstrap，适合初学Web前端用于练手的项目
+该平台所涉及Web前端基本语法，页面的框架基本是layui和Bootstrap，适合初学Web前端用于练手的项目
 * HTML/CSS/Javascript基本编程
 * 使用了Ajax、JSON技术，运用其调用API获取JSON数据
 * 熟练运用JQuery和Bootstrap框架
+* 熟练的使用了layui组件库
 # 特点
 * 简洁明了的首页，展示了汽车的各种车型及其品牌
 * 有地图显示的功能，购车者可以随时查看附近的车行
