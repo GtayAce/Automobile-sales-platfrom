@@ -27,13 +27,12 @@
 * IP定位接口：该IP定位功能是调用高德地图API，通过也是Ajax的xmlHttpRequest请求，key是同样也是直接给出的，注册也是免费版本，接口同样有限制。
 * 天气接口:  该天气的数据是调用和风天气API,通过是Ajax的xmlHttpRequest请求，key是直接给出的，由于注册的是免费版本，接口数据的调用次数是有限的。
 # 项目总结
-** 解决跨域和跨页面通信的问题
+## 解决跨域和跨页面通信的问题
 我使用的是window.postMessage函数
 `Window.postMessage(message, targetOrigin, [transfer]);`
-*** 通信监听方法
-(```)
+### 通信监听方法
+```
 window.addEventListener("message", receiveMessage, false);
-
 function receiveMessage(event)
 {
   // For Chrome, the origin property is in the event.originalEvent
@@ -44,4 +43,4 @@ function receiveMessage(event)
 
   // ...
 }
-(```)
+```
