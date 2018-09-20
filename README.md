@@ -29,10 +29,8 @@
 # 项目总结
 ** 解决跨域和跨页面通信的问题
 我使用的是window.postMessage函数
-(```)
-   Window.postMessage(message, targetOrigin, [transfer]);
-(```)
-通信监听方法
+`Window.postMessage(message, targetOrigin, [transfer]);`
+*** 通信监听方法
 (```)
 window.addEventListener("message", receiveMessage, false);
 
