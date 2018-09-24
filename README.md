@@ -6,13 +6,13 @@
 # 效果图
 ## 首页概览
 ![HomePage](http://pdi3m4use.bkt.clouddn.com/Home.png)
-![HomePage](http://pdi3m4use.bkt.clouddn.com/CarSystem2.png)
 ## 登录
 ![Login](http://pdi3m4use.bkt.clouddn.com/Login.png)
 ## 地图
 ![map](http://pdi3m4use.bkt.clouddn.com/map.png)
 ## 天气
 ![weather](http://pdi3m4use.bkt.clouddn.com/CarSystemWeather.png)
+
 # 技术框架
 该平台所涉及Web前端基本语法，页面的框架基本是layui和Bootstrap，适合初学Web前端用于练手的项目
 * HTML/CSS/Javascript基本编程
