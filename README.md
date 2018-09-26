@@ -1,9 +1,7 @@
 # 汽车销售平台
-这是一个基于layui框架搭建的汽车销售的交易平台,用户可以进行登录之后即可选择自己的喜欢的车型进行购买。     
-管理员登陆可以进行对整个车行销售情况的查看,并可以对用户、车类型、车辆、订单进行管理
-
-
-# 效果图
+这是一个基于java web搭建的汽车销售的交易平台,用户可以进行登录之后即可选择自己的喜欢的车型进行购买。        
+管理员登录可以进行对整个车行销售情况的查看,包括对用户、车类型、车辆、订单进行管理。   
+# 项目截图
 ### 首页概览
 ![HomePage](http://pdi3m4use.bkt.clouddn.com/Home1png.png)
 ![HomePage1](http://pdi3m4use.bkt.clouddn.com/listcar.png)
@@ -13,16 +11,28 @@
 ![map](http://pdi3m4use.bkt.clouddn.com/map.png)
 ### 天气
 ![weather](http://pdi3m4use.bkt.clouddn.com/CarSystemWeather.png)
-### 我的订单
+### 购车界面
+![ShopUI](http://pdi3m4use.bkt.clouddn.com/ShopUI.png)
+### 订单确认
+![ShopOrder](http://pdi3m4use.bkt.clouddn.com/ShopOrder.png)
+### 用户管理
+![usermanager](http://pdi3m4use.bkt.clouddn.com/UserManager.png)
+### 车类型管理
+![CarTypemanager](http://pdi3m4use.bkt.clouddn.com/CayType.png)
+### 车辆管理
+![Carmanager](http://pdi3m4use.bkt.clouddn.com/CarManager.png)
+### 订单管理
+![ordermanager](http://pdi3m4use.bkt.clouddn.com/ordermanager.png)
+### 查看我的订单
 ![Order](http://pdi3m4use.bkt.clouddn.com/Order.png)
 # 技术框架
 该平台所涉及Web前端基本语法，页面的框架基本是layui和Bootstrap，适合初学Web前端用于练手的项目
-* HTML/CSS/Javascript基本编程
-* 使用了Ajax、JSON技术，运用其调用API获取JSON数据
-* 熟练运用JQuery和Bootstrap框架
-* 熟练的使用了layui组件库
+* HTML/CSS/Javascript (基本语法)
+* Ajax、JSON (调用API获取得到JSON数据)
+* JQuery、Bootstrap (基本框架)
+* layui (模块化前端框架)
 # 特点
-* 简洁明了的首页，展示了汽车的各种车型及其品牌
+- [x] 简洁明了的首页，展示了汽车的各种车型及其品牌
 * 有地图显示的功能，购车者可以随时查看附近的车行
 * 有天气预报的功能，购车者可以随时查询近些天天气信息，预判是否适合出行购买车
 * 可以手动输入IP地址进行自动定位
