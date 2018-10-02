@@ -10,7 +10,7 @@
 ### 地图
 ![map](http://pdi3m4use.bkt.clouddn.com/map.png)
 ### 天气
-![weather](http://pdi3m4use.bkt.clouddn.com/CarSystemWeather.png)
+![weather](http://pdi3m4use.bkt.clouddn.com/weather.png)
 ### 购车界面
 ![ShopUI](http://pdi3m4use.bkt.clouddn.com/ShopUI.png)
 ### 订单确认
